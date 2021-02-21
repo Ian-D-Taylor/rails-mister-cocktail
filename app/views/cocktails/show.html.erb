@@ -1,10 +1,15 @@
 <div class="container">
+  <div>
+    <%= link_to 'Add Ingredients', new_cocktail_dose_path(params[:id]) %>
+  </div>
     <h1 class="text-center">
     <%= @cocktail.name %>
     </h1>
     <p>
     <% @doses.each do |dose| %>
-    <p>dose.description</p>
+    <p>
+        <%= dose.description %> - <%= Ingredient.find(dose.ingredient_id).name %>
+    </p>
     <% end %>
     </p>
 </div>
