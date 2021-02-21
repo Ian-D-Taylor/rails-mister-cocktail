@@ -1,8 +1,11 @@
 <div class="container">
     <h1 class ="text-center">Famous Cocktails</h1>
+    <div>
+    <%= link_to "Add Cocktail", new_cocktail_path %>
+    </div>
         <% @cocktails.each do |cocktail| %>
         <li>
-        <%= @cocktail.name %>
+        <%= cocktail.name %>
         </li>
     <% end %>
 </div>
